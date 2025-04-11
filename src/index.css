@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Red Hat Mono", monospace;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@theme {
+  /* Primary - Black */
+  --color-primary-mild: #6d6d6d;
+  --color-primary: #3b3b3b; /* Base */
+  --color-primary-bold: #1c1c1c;
+
+  /* Secondary - White */
+  --color-secondary-mild: #ffffff;
+  --color-secondary: #fefefe;
+  --color-secondary-bold: #e0e0e0;
+
+  /* Accent - Violet (approx oklch values around 300 hue) */
+  --color-accent-mild: oklch(85% 0.08 300);
+  --color-accent: oklch(70% 0.1 300);
+  --color-accent-bold: oklch(50% 0.13 300);
+
+  /* Neutral */
+  --color-neutral-mild: oklch(85% 0.02 250);
+  --color-neutral: oklch(70% 0.03 250);
+  --color-neutral-bold: oklch(50% 0.05 250);
+
+  /* Success */
+  --color-success-mild: oklch(85% 0.08 140);
+  --color-success: oklch(70% 0.1 140);
+  --color-success-bold: oklch(50% 0.13 140);
+
+  /* Warning */
+  --color-warning-mild: oklch(85% 0.08 50);
+  --color-warning: oklch(70% 0.1 50);
+  --color-warning-bold: oklch(50% 0.13 50);
+
+  /* Danger */
+  --color-danger-mild: oklch(85% 0.08 30);
+  --color-danger: oklch(70% 0.1 30);
+  --color-danger-bold: oklch(50% 0.13 30);
+
+  /* Info */
+  --color-info-mild: oklch(85% 0.08 200);
+  --color-info: oklch(70% 0.1 200);
+  --color-info-bold: oklch(50% 0.13 200);
+
+  /* Black & White Variants */
+  --color-black-mild: #6d6d6d;
+  --color-black: #3b3b3b;
+  --color-black-bold: #1c1c1c;
+
+  --color-white-mild: #ffffff;
+  --color-white: #fefefe;
+  --color-white-bold: #e0e0e0;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
